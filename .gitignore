@@ -1,0 +1,7 @@
+
+# Project exclude paths
+/mxk-client-spring-boot-starter/target/
+/mxk-common/target/
+/.idea/
+/*/target/
+*.iml

@@ -1,0 +1,31 @@
+server:
+  port: 9001
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+#    url: jdbc:mysql://127.0.0.1:3306/mxk?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://127.0.0.1:3306/mxk?useUnicode=true&characterEncoding=utf-8&nullCatalogMeansCurrent=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: Root-123
+    driver-class-name: com.mysql.jdbc.Driver
+  #Freemarker
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    servlet:
+      content-type: text/html
+
+mxk:
+  server-web-socket-url: ws://127.0.0.1:9999
+  user-password-salt: d5ec0a02
+
+nacos:
+  discovery:
+    server-addr: 127.0.0.1:8848
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+
